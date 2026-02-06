@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Roleo Audit & Upload Console</title>
+    <style>
+      body { font-family: Inter, system-ui, sans-serif; margin: 24px; }
+      pre { background: #0f172a; color: #e2e8f0; padding: 16px; border-radius: 8px; overflow: auto; }
+      button { padding: 8px 12px; }
+    </style>
+  </head>
+  <body>
+    <h1>Audit & Upload Console</h1>
+    <p>Internal admin-only UI for upload events, storage objects, and audit logs.</p>
+    <button id="load">Load recent audit logs</button>
+    <pre id="out">[]</pre>
+    <script>
+      async function load() {
+        const res = await fetch(`${window.ROLEO_API_URL || ''}/v1/admin/audit-logs`, {
+          headers: { Authorization: `Bearer ${window.ROLEO_ADMIN_TOKEN || ''}` }
+        });
+        document.getElementById('out').textContent = JSON.stringify(await res.json(), null, 2);
+      }
+      document.getElementById('load').addEventListener('click', load);
+    </script>
+  </body>
+</html>

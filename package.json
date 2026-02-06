@@ -1,0 +1,17 @@
+{
+  "name": "roleo",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "replit-console"
+  ],
+  "scripts": {
+    "dev:web": "npm --workspace apps/web run dev",
+    "dev:api": "npm --workspace apps/api run dev",
+    "dev:workers": "npm --workspace apps/workers run dev",
+    "build": "npm -ws run build",
+    "lint": "npm -ws run lint",
+    "test": "npm -ws run test"
+  }
+}

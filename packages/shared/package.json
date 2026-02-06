@@ -1,0 +1,5 @@
+{
+  "name": "@roleo/shared",
+  "type": "module",
+  "main": "src/index.ts"
+}

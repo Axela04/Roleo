@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Roleo MVP Preview</title>
+  <style>
+    :root { --bg: #f8fafc; --card: #ffffff; --text: #0f172a; --muted: #475569; --border: #e2e8f0; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif; background: var(--bg); color: var(--text); }
+    nav { display: flex; gap: 20px; padding: 14px 24px; border-bottom: 1px solid var(--border); background: var(--card); }
+    nav a { text-decoration: none; color: var(--text); font-size: 14px; }
+    .container { padding: 24px; }
+    .headline { font-size: 28px; font-weight: 700; margin: 0 0 8px; }
+    .sub { color: var(--muted); margin: 0 0 20px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 16px; }
+    .card h3 { margin: 0 0 8px; font-size: 16px; }
+    .card p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.5; }
+    .plans { margin-top: 16px; display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px; }
+    .pill { display: inline-block; font-size: 12px; background: #e2e8f0; color: #334155; padding: 4px 8px; border-radius: 999px; }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#">Dashboard</a>
+    <a href="#">Jobs</a>
+    <a href="#">Applications</a>
+    <a href="#">Billing</a>
+    <a href="#">Admin</a>
+  </nav>
+  <main class="container">
+    <h1 class="headline">Roleo MVP Frontend Preview</h1>
+    <p class="sub">Fallback runnable preview used when dependency installation is blocked in restricted environments.</p>
+    <span class="pill">SerpAPI-first ingestion • BYO job link import • Claude tailoring guardrails</span>
+
+    <section class="grid" style="margin-top: 16px;">
+      <article class="card">
+        <h3>Profile Hub</h3>
+        <p>Canonical profile, work history, education, certifications, and resume/cover version rollback.</p>
+      </article>
+      <article class="card">
+        <h3>Job Discovery</h3>
+        <p>Google Jobs via SerpAPI with dedupe, recency filters, and pgvector ranking against profile and resume embeddings.</p>
+      </article>
+      <article class="card">
+        <h3>Apply Kit + CRM</h3>
+        <p>Bundle tailored resume/cover, supporting docs, and track pipeline from Saved through Offer/Closed.</p>
+      </article>
+      <article class="card">
+        <h3>Favorites & Alerts</h3>
+        <p>Email + in-app alerts for last 24h matches and favorited companies with 15-minute target latency.</p>
+      </article>
+      <article class="card">
+        <h3>Stripe Plans</h3>
+        <p>Launch (10/wk), Advance (15/wk), Accelerate (25/wk), Executive (50+) with hard usage gating.</p>
+      </article>
+      <article class="card">
+        <h3>Admin & Audit</h3>
+        <p>Audit logs for uploads/downloads, AI edits, job ingest, application transitions, alerts, and admin actions.</p>
+      </article>
+    </section>
+
+    <section class="plans">
+      <div class="card"><h3>Launch</h3><p>$29 • 10 applications/week</p></div>
+      <div class="card"><h3>Advance</h3><p>$59 • 15 applications/week</p></div>
+      <div class="card"><h3>Accelerate</h3><p>$109 • 25 applications/week</p></div>
+      <div class="card"><h3>Executive</h3><p>$249+ • 50+ applications/week</p></div>
+    </section>
+  </main>
+</body>
+</html>
